@@ -24,7 +24,7 @@
   "homepage": "https://github.com/graphcool/graphql-import-loader",
   "scripts": {
     "prepare": "npm run build",
-    "build": "rm -rf dist && tsc -d",
+    "build": "rimraf -rf dist && tsc -d",
     "pretest": "npm run build",
     "test": "jest"
   },
@@ -34,10 +34,12 @@
   "devDependencies": {
     "@types/jest": "^22.1.4",
     "@types/node": "^9.4.6",
-    "ts-jest": "^22.4.1",
     "graphql": "^0.13.1",
     "jest": "^22.4.2",
     "memory-fs": "^0.4.1",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.1",
     "typescript": "^2.7.2",
     "webpack": "^4.0.1"
   }
